@@ -7,7 +7,7 @@ Raft Consensus Algorithm
 - [x] Log Replication
 - [x] Log Persistence
 
-Passed all the test cases of Lab 2. Test result is shown as below:
+Passed all the test cases. Test result is shown as below:
 
 ```
 Test (2A): initial election ...
@@ -56,10 +56,10 @@ ok  	github.com/SAI-CHARAN-JAKKULA/FaultTolerant-raft-key-value-store/raft	181.8
 
 **Note**:
 
-- A tricky problem in Lab 3 is directly `append()` a part of old log to the new log will not eliminate the reference to the underlying array of old log. Thus, be careful to copy the part of the old slice first and then `append()` it to the new slice.
+- A tricky problem in is directly `append()` a part of old log to the new log will not eliminate the reference to the underlying array of old log. Thus, be careful to copy the part of the old slice first and then `append()` it to the new slice.
 - When performing `InstallSnapshot`, be sure to check whether should apply snapshot to server. When server state is ahead of snapshot state, applying snapshot will roll back server state, such that will lead to inconsistency.
 
-Passed all test cases of Lab 3. Test result is shown as below:
+Passed all test cases. Test result is shown as below:
 
 ```
 Test: one client (3A) ...
@@ -120,9 +120,9 @@ ok  	github.com/SAI-CHARAN-JAKKULA/FaultTolerant-raft-key-value-store/kvraft	372
 
 Shard Master plays the role of processing the configuration update. Specifically, it assigns the paritions to different server groups as evenly as possible. It aslo dynamically change the assignment according to the change on the number of server groups.
 
-**Note**: In Lab 4A, when we pass the commands to Raft, we should not pass the pointers.
+**Note**:when we pass the commands to Raft, we should not pass the pointers.
 
-Passed test cases of Lab 4A:
+Passed test cases:
 
 ```
 Test: Basic leave/join ...
